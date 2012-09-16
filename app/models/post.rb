@@ -1,3 +1,4 @@
 class Post < ActiveRecord::Base
-  attr_accessible :content, :title
+  attr_accessible :content, :title, :comments
+  has_many :comments, dependent: :destroy
 end
